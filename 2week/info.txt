@@ -1,0 +1,5 @@
+Edge detection : https://www.youtube.com/watch?v=APBXfqVccS0
+Morphological image processing : https://www.youtube.com/watch?v=IcBzsP-fvPo
+Calculating image gradients : https://www.youtube.com/watch?v=fhDBy-wV3ic
+Image filters : https://www.youtube.com/watch?v=C_zFhWdM4ic&list=PLzH6n4zXuckoRdljSlM2k35BufTYXNNeF
+
