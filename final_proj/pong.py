@@ -152,7 +152,6 @@ def reset_game_vars():
     FRAMES_PER_SECOND = 60
     BALL_SIZE = 15
     LEFT_SCORE, RIGHT_SCORE = 0, 0
-    # BALL_VEL = [5, 5]
     PAUSED = True
     calculate_size_of_items()
     screen = pygame.display.set_mode((WIDTH, HEIGHT), DOUBLEBUF | OPENGL)
