@@ -1,8 +1,0 @@
-Gian Singh, gs4@njit.edu
-
-1. Median Filter :
-2. Gaussian Filter :
-3. Laplacian :
-4. Create an Image of a Circle :
-5. Scaling images :
-

@@ -1,0 +1,6 @@
+In one of the links, a stream like fluid is being simulated
+while in the other, a solid like fluid is being simulated.
+like the fluid has dots in it. Both are very different.
+1 seems like its simulating water being droped and is more fluid
+while the other is like a fluid stream that is more grid based
+

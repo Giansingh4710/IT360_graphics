@@ -1,0 +1,22 @@
+1) https://editor.p5js.org/gs4/sketches/lweEP-hgS
+
+2) In the current simulation, agents abruptly teleport when crossing canvas
+boundaries, lacking continuity. While agents exhibit avoidance behavior, they
+lack more nuanced social interactions seen in real-world crowds, such as
+flocking or group formation. Furthermore, the agents' velocities are directly
+impacted by avoidance forces, resulting in sudden and unrealistic directional
+changes, unlike the smoother and gradual adjustments seen in real human motion.
+
+They Overlap so collions don't work well
+The dot slow down very weirdly
+Some dots repel each other too much
+Feels like magnatic force
+
+3) https://jsfiddle.net/9xe1wzrm/
+
+4) Simulating a large crowd of agents is challenging due to the need for high FPS,
+fast algorithms, and realistic visualization. Maintaining good FPS can be
+difficult as a large number of agents strain the system. Speedy algorithms are
+essential for smooth agent interactions, and efficient visualization techniques
+are required for realistic representation without overloading the graphics.
+Balancing these factors is crucial for effective real-time crowd simulations.

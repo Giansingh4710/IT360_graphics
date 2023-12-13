@@ -1,0 +1,8 @@
+Gian Singh, gs4@njit.edu
+
+1. Median Filter : https://editor.p5js.org/gs4/sketches/KE7XIX9fO
+2. Gaussian Filter : https://editor.p5js.org/gs4/sketches/gAdDj8yel
+3. Laplacian : https://editor.p5js.org/gs4/sketches/hU_DMyQBb
+4. Create an Image of a Circle : https://editor.p5js.org/gs4/sketches/MzwEfqVBL
+5. Scaling images : https://editor.p5js.org/gs4/sketches/BPfykoNPA
+

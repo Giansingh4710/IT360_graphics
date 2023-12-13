@@ -1,0 +1,20 @@
+Motion capture system captures actor's movement using markers/sensors. Data is
+processed to extract key points. Motion data is mapped onto ant model. Animation
+is adjusted for natural movement. Ant model is rendered with effects for final
+animation. Ant-specific challenges may limit feasibility.
+
+More:
+   Creating an ant walking animation using motion capture involves several
+  technical concepts. First, a motion capture system would be set up, consisting
+  of multiple cameras or sensors to track the movement of an actor wearing markers
+  or sensors on their body. The actor would perform the walking motion, and the
+  motion capture system would record the positional data of the markers/sensors.
+  This data would then be processed using software to extract the key points of
+  the motion, such as the position and orientation of the limbs and body. Next,
+  the motion data would be mapped onto a 3D model of an ant, aligning the
+  corresponding joints and limbs. Additional adjustments may be made to ensure the
+  animation looks natural and ant-like. Finally, the animated ant model would be
+  rendered with textures, lighting, and other visual effects to create the final
+  walking animation. However, it's worth noting that motion capture for ants
+  specifically may not be feasible due to their small size and complex leg
+  movements, which could be challenging to capture accurately.

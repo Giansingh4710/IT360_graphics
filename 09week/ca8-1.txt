@@ -1,0 +1,3 @@
+the pinkish line means the main path its travelling
+the red boxes mean where it has explored
+the green boxes mean where you stop exploring

@@ -1,0 +1,17 @@
+The simulation allows agents to cross the boundaries of the canvas, which
+results in abrupt teleportation of agents to the opposite side.
+
+The agents in the simulation exhibit avoidance behavior, but there's a missing
+aspect of social interaction. They only seem to avoid each other without any
+clear goal or collective behavior. Real-world crowd simulations often involve
+interactions beyond mere avoidance, such as flocking or group formation.
+
+The agents' velocities are directly adjusted by the
+avoidance forces, leading to sudden and unrealistic changes in direction. Real
+individuals tend to exhibit smoother, continuous motion with gradual adjustments
+in response to their surroundings.
+
+They Overlap so collions don't work well
+The dot slow down very weirdly
+Some dots repel each other too much
+Feels like magnatic force

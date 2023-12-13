@@ -1,0 +1,16 @@
+1) The cloth simulation exhibits a high degree of realism. Its movement is
+smooth and natural, accurately mirroring how real cloth would bounce and sway.
+The absence of choppy or abrupt motions adds to its authenticity. Furthermore,
+the shadow rendering contributes significantly to the overall realism, enhancing
+the perception of depth and materiality, making the simulation appear
+exceptionally lifelike.
+
+2) The compliance makes the cloth more bouncy and elastic. The lower the bar
+the more it bounces
+
+3) The balls on the 2 sides are not acting naturally and are stacked on top of
+eachother. It looks unreal. The more balls added, the weirder it looks
+
+4) https://editor.p5js.org/gs4/sketches/jK3Dz6S6H
+
+5) https://editor.p5js.org/gs4/sketches/NfI-wJaxu

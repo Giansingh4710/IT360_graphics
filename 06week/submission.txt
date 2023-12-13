@@ -1,0 +1,9 @@
+https://editor.p5js.org/gs4/sketches/Z0j8HDB9A
+https://editor.p5js.org/gs4/sketches/mQChvtI5x
+https://editor.p5js.org/gs4/sketches/gkrKrJE2y
+
+Representing 3D objects with particles has its upsides and downsides. The
+advantages include creating realistic natural effects, dynamic animations, and
+efficiency for certain scenarios. However, it's not great for highly detailed
+objects, and it can be computationally demanding. Achieving the desired visual
+results can also be artistically challenging.

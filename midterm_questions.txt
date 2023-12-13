@@ -1,0 +1,22 @@
+1) What problem is the paper trying to solve?
+2) Is this an interesting problem to solve?
+3) What is the contribution of the paper towards solving this problem?
+4) How are the results evaluated?
+5) What are the main strengths and weaknesses?
+6) What future work could be done that builds on this paper? 
+
+Universal Power Law (UPLGPI)
+  1) Predict how pedestrians move in a crowd
+  2) Yes. It can be used in video games and and engineering planning
+  3) Simulating Pedestrians' Street smarts
+  4) How realistic is the simulation
+  5) Simulation is Good but weaknesses: Homogeneity, individual actions, mental and culture aspects
+  6) More realistic simulation
+
+Rendering Synthetic Objects into 
+  1) Put synthetic objects into real pictures
+  2) Yes. Can be used in film, video games, home decoration. Gives accesibility to people to add fake objects that don't know editing
+  3) Allow users to insert objects within an image
+  4) How realistic is the image looks
+  5) Strength: Can insert objects and look realistc. Better than Retinex Weak: No mesh insertion and lighting is weak. Bad if bad image quality and bad annotation.
+  6) better illumination formulas and mesh insertion. Better water/mirror reflection

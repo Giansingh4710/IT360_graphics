@@ -1,0 +1,8 @@
+1)
+  the pinkish line means the main path its travelling
+  the red boxes mean where it has explored
+  the green boxes mean where you stop exploring
+
+2) https://editor.p5js.org/gs4/sketches/l9PhQeNE6
+
+3) https://jsfiddle.net/a1j2v64n/

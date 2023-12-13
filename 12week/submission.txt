@@ -1,0 +1,40 @@
+1)
+  In one of the links, a stream like fluid is being simulated
+  while in the other, a solid like fluid is being simulated.
+  like the fluid has dots in it. Both are very different.
+  1 seems like its simulating water being droped and is more fluid
+  while the other is like a fluid stream that is more grid based
+
+2)
+  This code creates a cool fluid simulation using a grid. It keeps track of stuff
+  like how fast the fluid is moving (velocity), how much stuff is in it (density),
+  and those twisty patterns (vorticity). The denser areas show up in bright red,
+  and the vorticity does its thing in green and blue. You can play around by
+  clicking the mouse to add more density and make the fluid move. The magic
+  happens on a grid, and the code uses tricks like advection, diffusion, and
+  vorticity confinement to make it look like a flowing liquid. It's like a digital
+  lava lamp that you can control!
+
+3)
+   The code presents three different visualization methods for the fluid
+  simulation. The "marching" method outlines the boundaries of fluid regions using
+  marching squares, resulting in a clear representation of fluid shapes but with a
+  blocky appearance. The "smooth" method smoothens the visualization, providing a
+  more continuous representation of the fluid boundary by interpolating between
+  grid points. The "pixels" method uses squares to represent fluid regions,
+  offering a straightforward pixelated visualization. Pros of the "marching"
+  method include clarity of boundaries, while the "smooth" method offers a
+  visually smoother representation. However, to enhance the fluid-like appearance,
+  further improvements in interpolation and visual smoothness could be explored,
+  and the addition of color gradients based on fluid properties might contribute
+  to a more realistic fluid simulation. Additionally, incorporating more
+  sophisticated fluid dynamics algorithms could improve the overall realism of the
+  simulation.
+
+4)
+   Changing the 'rez' parameter in the provided code affects the resolution of the
+  fluid simulation. A higher 'rez' value leads to a finer grid, resulting in a
+  more detailed and accurate representation of the fluid's behavior, but it also
+  increases computational complexity. Conversely, a lower 'rez' value provides a
+  coarser simulation, reducing computational demands but potentially sacrificing
+  detail and accuracy in the visualization.
