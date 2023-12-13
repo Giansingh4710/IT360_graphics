@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Understanding a Simple Pong Game in Python with Pygame</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1em;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1,
+      h2,
+      p,
+      pre,
+      code {
+        color: #333;
+      }
+
+      pre {
+        background-color: #f8f8f8;
+        padding: 10px;
+        overflow-x: auto;
+        border-radius: 5px;
+      }
+
+      code {
+        font-family: 'Courier New', monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Understanding a Simple Pong Game in Python with Pygame</h1>
+    </header>
+
+    <main>
+      <h2>Introduction</h2>
+      <p>
+        Pygame is a popular library for creating 2D games in Python. In this
+        blog post, we'll explore a simple Pong game implemented using Pygame and
+        OpenGL. The provided code showcases the basic mechanics of the game,
+        including paddle movement, ball bouncing, scoring, and more.
+      </p>
+
+      <h2>Code Overview</h2>
+      <p>
+        The code is well-structured and organized into functions, each
+        responsible for a specific aspect of the game. Let's break down some key
+        components:
+      </p>
+
+      <h1>Important Functions</h1>
+
+      <h3>Start of the Program</h3>
+      <pre><code>
+        if __name__ == "__main__":
+        pygame.init()
+
+        reset_game_vars()
+        glOrtho(0, WIDTH, HEIGHT, 0, -1, 1)
+        draw_screen() # Draw initial screen
+        main()
+      </code></pre>
+
+      <h3>Reset Function</h3>
+      <pre><code>
+        def reset_game_vars():
+        global WIDTH, HEIGHT, FRAMES_PER_SECOND, BALL_SIZE, PAUSED
+        global LEFT_SCORE, RIGHT_SCORE
+
+        WIDTH, HEIGHT = 800, 600
+        FRAMES_PER_SECOND = 60
+        BALL_SIZE = 15
+        LEFT_SCORE, RIGHT_SCORE = 0, 0
+        PAUSED = True
+        calculate_size_of_items()
+        screen = pygame.display.set_mode((WIDTH, HEIGHT), DOUBLEBUF | OPENGL)
+      </code></pre>
+       <p>There is functionality where you can reset the game if you press r,
+        so made a function that brings everything back to the beginning </p>
+
+      <h3>Main Rendering</h3>
+      <pre><code>
+        def draw_screen():
+            glClear(GL_COLOR_BUFFER_BIT)  # Clear the screen
+
+            # Draw paddles and ball
+            glBegin(GL_QUADS)
+            glVertex2fv(LEFT_PADDLE_POS)
+            glVertex2fv([LEFT_PADDLE_POS[0] + PADDLE_WIDTH, LEFT_PADDLE_POS[1]])
+            glVertex2fv([LEFT_PADDLE_POS[0] + PADDLE_WIDTH, LEFT_PADDLE_POS[1] + PADDLE_HEIGHT])
+            glVertex2fv([LEFT_PADDLE_POS[0], LEFT_PADDLE_POS[1] + PADDLE_HEIGHT])
+
+            glVertex2fv(RIGHT_PADDLE_POS)
+            glVertex2fv([RIGHT_PADDLE_POS[0] + PADDLE_WIDTH, RIGHT_PADDLE_POS[1]])
+            glVertex2fv(
+                [RIGHT_PADDLE_POS[0] + PADDLE_WIDTH, RIGHT_PADDLE_POS[1] + PADDLE_HEIGHT]
+            )
+            glVertex2fv([RIGHT_PADDLE_POS[0], RIGHT_PADDLE_POS[1] + PADDLE_HEIGHT])
+
+            glVertex2fv([BALL_POS[0], BALL_POS[1]])
+            glVertex2fv([BALL_POS[0] + BALL_SIZE, BALL_POS[1]])
+            glVertex2fv([BALL_POS[0] + BALL_SIZE, BALL_POS[1] + BALL_SIZE])
+            glVertex2fv([BALL_POS[0], BALL_POS[1] + BALL_SIZE])
+            glEnd()
+            write_text()
+            pygame.display.flip()
+            pygame.time.Clock().tick(FRAMES_PER_SECOND)
+      </code></pre>
+      <p>This function is where the drawing mainly happens. We have the logic seperate to keep the code clean</p>
+
+      <h3>Rendering Text</h3>
+      <pre><code>
+        def write_text():
+            height_pos = HEIGHT // 2 + 100
+
+            def write_to_screen(text):
+                nonlocal height_pos
+                glColor3f(190.0, 167.0, 4.0)
+                glRasterPos2f((WIDTH - len(text) * 10) // 2, height_pos)
+                for char in text:
+                    glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, ord(char))
+
+                height_pos += 30
+
+            write_to_screen(f"Score is {LEFT_SCORE} - {RIGHT_SCORE}")
+            write_to_screen("Keys:")
+            write_to_screen("Left paddle: W and S")
+            write_to_screen("Right paddle: Up and Down")
+            write_to_screen(f"Press Space to: {'Play' if PAUSED else 'Pause'}")
+            write_to_screen("First to 5 wins!")
+            if LEFT_SCORE >= 5 or RIGHT_SCORE >= 5:
+                write_to_screen("Game Over")
+                write_to_screen("Press R to restart")
+      </code></pre>
+      <p>It took a while to figure out how to render text to the screen. It was a pain to figure  
+        out. We have to account and render each character individually. Luckly,
+        in python, you can use the power of closures to make it easier to render but creating helper functions
+      </p>
+
+
+
+      <h2>How It Works</h2>
+      <p>
+        The game utilizes Pygame for handling user input, updating the game
+        state, and rendering the graphics. Paddles are moved using keyboard
+        inputs (W, S, Up, Down), and the ball bounces off paddles and walls. The
+        game keeps track of scores and adjusts the window size dynamically based
+        on scoring events.
+      </p>
+
+      <h2>Further Exploration</h2>
+      <p>
+        Feel free to experiment with the code, add new features, or enhance
+        existing ones. Game development is a creative process, and this Pong
+        game provides a solid foundation for building more complex projects.
+      </p>
+    </main>
+  </body>
+</html>
